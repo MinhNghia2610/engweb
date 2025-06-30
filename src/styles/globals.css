@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #00BFFF;
+  --secondary-color: #0F172A;
+  --highlight-color: #7DF9FF;
+  --background-color: #F8FBFF;
+  --text-color: #1E293B;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: var(--font-main);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--highlight-color);
+  color: var(--secondary-color);
+}
+
+.homepage {
+  padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #e0f7ff, #ffffff);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-outline {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: var(--highlight-color);
+  color: var(--secondary-color);
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 1rem;
+}
+
+.features {
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 250px;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
+}

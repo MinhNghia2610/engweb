@@ -1,95 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// app/page.tsx
+import Link from 'next/link';
+import '../styles/globals.css';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main className="homepage">
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Học tiếng Anh để mở rộng tương lai 🌍</h1>
+          <p>Khám phá các khóa học chất lượng, dành cho mọi trình độ.</p>
+          <div className="hero-buttons">
+            <Link href="/register" className="btn">Đăng ký ngay</Link>
+            <Link href="/courses" className="btn-outline">Xem khóa học</Link>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="hero-image">
+          <img src="/english-learning.png" alt="Học tiếng Anh" />
+        </div>
+      </section>
+
+      <section className="features">
+        <h2>Tại sao chọn chúng tôi?</h2>
+        <div className="feature-list">
+          <div className="feature-item">
+            <h3>Giảng viên chất lượng</h3>
+            <p>100% giáo viên có chứng chỉ quốc tế như TESOL, IELTS 8.0+</p>
+          </div>
+          <div className="feature-item">
+            <h3>Lộ trình thông minh</h3>
+            <p>Cá nhân hóa theo từng cấp độ từ mất gốc đến nâng cao.</p>
+          </div>
+          <div className="feature-item">
+            <h3>Học mọi lúc, mọi nơi</h3>
+            <p>Truy cập khóa học 24/7 trên mọi thiết bị.</p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
