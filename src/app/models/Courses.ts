@@ -7,4 +7,4 @@ const CourseSchema = new Schema({
   image: String,
 });
 
-export const Course = mongoose.models.Course || mongoose.model('Course', CourseSchema);
+export const Course = mongoose.models.Course || mongoose.model('Course', CourseSchema)
