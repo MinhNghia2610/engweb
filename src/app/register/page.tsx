@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import '../../styles/auth.css';
 
 export default function RegisterPage() {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
