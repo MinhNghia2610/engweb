@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #00BFFF;
-  --secondary-color: #0F172A;
-  --highlight-color: #7DF9FF;
-  --background-color: #F8FBFF;
-  --text-color: #1E293B;
+  --primary-color: #00BFFF;         /* Xanh Dương Tương Lai */
+  --secondary-color: #0F172A;       /* Xanh Đậm */
+  --highlight-color: #7DF9FF;       /* Xanh Neon */
+  --background-color: #F8FBFF;      /* Trắng Kem */
+  --text-color: #1E293B;            /* Tím Than */
   --font-main: 'Segoe UI', sans-serif;
 }
 
@@ -17,15 +17,45 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: inherit;
+}
+
+/* ======= Navbar ======= */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* ======= Buttons ======= */
 .btn {
   background-color: var(--primary-color);
   color: white;
@@ -42,10 +72,27 @@ a {
   color: var(--secondary-color);
 }
 
+.btn-outline {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: var(--highlight-color);
+  color: var(--secondary-color);
+}
+
+/* ======= Homepage ======= */
 .homepage {
   padding: 2rem;
 }
 
+/* ======= Hero Section ======= */
 .hero {
   display: flex;
   align-items: center;
@@ -53,12 +100,14 @@ a {
   background: linear-gradient(to right, #e0f7ff, #ffffff);
   border-radius: 1rem;
   padding: 3rem 2rem;
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.15);
   margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .hero-content {
   max-width: 50%;
+  min-width: 280px;
 }
 
 .hero h1 {
@@ -78,28 +127,15 @@ a {
   gap: 1rem;
 }
 
-.btn-outline {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--primary-color);
-  background: transparent;
-  color: var(--primary-color);
-  border-radius: 0.5rem;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn-outline:hover {
-  background-color: var(--highlight-color);
-  color: var(--secondary-color);
-}
-
 .hero-image img {
   width: 300px;
   border-radius: 1rem;
 }
 
+/* ======= Features ======= */
 .features {
   text-align: center;
+  padding: 2rem 0;
 }
 
 .features h2 {
@@ -110,16 +146,36 @@ a {
 
 .feature-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
 .feature-item {
-  flex: 1;
-  min-width: 250px;
   background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
+  max-width: 300px;
+  min-width: 250px;
+  flex: 1;
+}
+
+.feature-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+/* ======= Footer ======= */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #555;
+  margin-top: 3rem;
 }
