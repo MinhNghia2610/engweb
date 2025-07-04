@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import '../../styles/auth.css';
 
 export default function LoginPage() {
   const [form, setForm] = useState({ email: '', password: '' });

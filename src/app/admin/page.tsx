@@ -1,28 +1,47 @@
+'use client';
 import Link from 'next/link';
 import '../../styles/admin.css';
 
 export default function AdminHome() {
   return (
-    <div className="admin-dashboard">
-      <h1>🎛️ Trang quản trị</h1>
-      <p>Chào mừng bạn đến với bảng điều khiển quản trị viên.</p>
+    <div className="admin-layout">
+      {/* Sidebar bên trái */}
+      <aside className="admin-sidebar">
+        <h2>📊 Admin</h2>
+        <nav>
+          <Link href="/admin/courses">📚 Khóa học</Link>
+          <Link href="/admin/users" className="disabled">👥 Người dùng</Link>
+          <Link href="/admin/orders" className="disabled">🛒 Đơn hàng</Link>
+        </nav>
+      </aside>
 
-      <div className="admin-menu">
-        <Link href="/admin/courses" className="admin-card">
-          <h2>📚 Quản lý Khóa học</h2>
-          <p>Thêm, sửa, xóa các khóa học tiếng Anh.</p>
-        </Link>
+      {/* Khu vực nội dung chính */}
+      <main className="admin-main">
+        <h1>🎛️ Trang quản trị</h1>
+        <p>Chào mừng bạn đến với bảng điều khiển quản trị viên.</p>
 
-        <Link href="/admin/users" className="admin-card disabled">
-          <h2>👥 Quản lý Người dùng</h2>
-          <p>Quản lý tài khoản học viên và giáo viên. (chưa xây)</p>
-        </Link>
+        {/* Các thẻ thống kê nhanh */}
+        <div className="admin-stats">
+          <div className="stat-card">
+            <h3>25</h3>
+            <p>Khóa học đang bán</p>
+          </div>
+          <div className="stat-card">
+            <h3>142</h3>
+            <p>Người dùng đã đăng ký</p>
+          </div>
+          <div className="stat-card">
+            <h3>58</h3>
+            <p>Đơn hàng trong tháng</p>
+          </div>
+        </div>
 
-        <Link href="/admin/orders" className="admin-card disabled">
-          <h2>🛒 Quản lý Đơn hàng</h2>
-          <p>Theo dõi và xử lý các đơn mua khóa học. (chưa xây)</p>
-        </Link>
-      </div>
+        {/* Placeholder cho biểu đồ */}
+        <div className="admin-chart">
+          <h2>📈 Thống kê doanh thu</h2>
+          <div className="chart-placeholder">[ Biểu đồ sẽ được hiển thị tại đây ]</div>
+        </div>
+      </main>
     </div>
   );
 }
